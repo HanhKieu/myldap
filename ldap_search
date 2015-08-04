@@ -1,0 +1,5 @@
+#ldapsearch -x -H ldap://ldap.ucdavis.edu -b ou=People,dc=ucdavis,dc=edu sn="green"
+ldapsearch  -x -H ldap://ldap.ucdavis.edu -b ou=People,dc=ucdavis,dc=edu cn=""
+#ldapsearch -x -H ldap://ldap.ucdavis.edu -b ou=People,dc=ucdavis,dc=edu mail="doty@ucdavis.edu"
+#ldapsearch -x -H ldap://ldap.ucdavis.edu -b ou=People,dc=ucdavis,dc=edu cn="Jim Moersfelder"
+#ldapsearch -x -H ldap://ldap.ucdavis.edu -b ou=People,dc=ucdavis,dc=edu cn="Artiom Sear:bol"

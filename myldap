@@ -1,0 +1,46 @@
+#!/bin/bash
+#cn = search by name
+#uid = search by uid
+#mail - search by mai
+#this script searches for people in the ucdavis directory
+#example
+#myldap cn "Hanh Kieu" will search for Hanh Kieu by his full name
+#myldap uid hhkieu will search for the username hhkieu is UCDavis database
+#######################################
+#-------------WRITTEN BY---------------
+#-/-/-/-/-/-/-\-\-\-\-\-\-\-\-\-\-\-\-\
+# H   H        A       N    N     H   H
+# H   H       A A      N N  N     H   H
+# H H H      A A A     N   NN     H H H
+# H   H     A     A    N   NN     H   H
+# H   H    A       A   N    N     H   H
+#-/-/-/-/-/-/-\-\-\-\-\-\-\-\-\-\-\-\-\
+#######################################
+#######################################
+# o/////+++++//////////////////////////o
+# o....------........---:::--------....+
+# o....-----.-//////::-------::/++--...o
+# s....--/o+/-```````````````````o/--..o
+# s...--s/```````````````````````+/---.o
+# y..---y````````````````````````o----.s
+# y..---s:```````````````````````s----.s
+# y..---:s``````````````````````-s----.s
+# s..----y````s:``````````/h````o:----.s
+# s..----s-```.`````````````````s-----.s
+# s..----:+````````````````````.s--.--.s
+# s..-----y````````````````````+/-..--.s
+# s......-d````:+++////:/::/-``s--..--.s
+# s......-y:```````````````````h------.s
+# s....---sy:````````````````/hm/---...s
+# s..---/ymmNmy+.```````.:/smNNmmh+...-s
+# s..:ohmmmmmNmmNho/oshmNmNNmmmmmmmh:--s
+# s-ymmmmmmmmmNNNmNmNNNNNNmmmmmmmmmmms-s
+# smmmmmmmmmmmmmNNmmmNNmmmmmmmmmmmmmmmho
+myCommand=$1
+myCommand+="="
+myCommand+=\"
+myCommand+=$2
+myCommand+=\"
+
+myCommand2="ldapsearch -x -H ldap://ldap.ucdavis.edu -b ou=People,dc=ucdavis,dc=edu $myCommand"
+eval $myCommand2
